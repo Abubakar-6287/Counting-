@@ -1,23 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counting Tailer</title>
 </head>
 <style>
-    .countBtn:active{
+    body {
+        width: 90%;
+        height: 90%;
+        /* background-image: u rl(loading.gif); */
+        background-size: 100%;
+        background-repeat: repeat;
+        background-color: white;
+    }
+
+    .countBtn:active {
         scale: 0.95;
         transform-origin: left;
-        
+    }
+
+    .re:active {
+        background-color: rgb(0, 0, 0);
+    }
+
+    @media (width>=500px) {
+        .re {
+            position: absolute;
+            top: 8%;
+            left: 62%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @keyframes run {
+        0% {
+            transform: translate(0px);
+        }
+
+        20% {
+            transform: translate(109px);
+        }
+
+        30% {
+            transform: translate(190px);
+        }
+
+        40% {
+            transform: translate(300px);
+        }
+
+        50% {
+            transform: translate(350px);
+        }
+
+        48% {
+            transform: translate(390px);
+        }
+
+        60% {
+            transform: translate(440px);
+        }
+
+        58% {
+            transform: translate(490px);
+        }
+
+        70% {
+            transform: translate(540px);
+        }
+
+        75% {
+            transform: translate(590px);
+        }
+
+        90% {
+            transform: translate(640px);
+        }
+
+        80% {
+            transform: translate(700px);
+        }
+
+        100% {
+            transform: translate(800px);
+        }
     }
 </style>
+
 <body bgcolor="gray">
+    <img src="loading.gif" alt="" style="position: absolute;
+    top: 300px;
+    left: 0;width: 100%; height: 50%; opacity: 0.25;">
+    <img src="ok.gif" alt="" id="im" style="
+    width: 70px; 
+    height: 25px; 
+    border-radius: 50%;
+    position: absolute; 
+    left: -20%;
+    top: -4px;
+    /* border: 1px solid #000; */
+
+    ">
     <div class="countBox" style="
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 300px;
     border: 5px solid #ffffff;
-    margin: 50px auto;
+    margin: 18px auto ;
     position: relative;
     box-shadow: 2px 2px 5px red inset,-2px -2px 5px red inset;
     align-items: center;
@@ -25,39 +115,58 @@
     /* place-content: center; */
     border-radius: 60px 0px 60px 0px ;
     background-image: url(tractor-infographic-style-ypk7j34kpyyxdyu7.gif);
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 5;
-    "
-    >
-    <h1 class="countHeading" style="
+    
+    ">
+        <h1 class="countHeading" style="
     color: red;
     text-shadow: 2px 2px 2px black;
     font-weight: 800;
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    "
-    >Counting Tailer</h1>
-    <div class="countDisplay" style="
+    ">Counting Tailer</h1>
+        <div class="countDisplay" style="
     width: 200px;
     height: 150px;
     border: 5px solid #000;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 0px 50px 0px 50px ;
     box-shadow: 5px 5px 5px #1f6018 inset,-5px -5px 5px #1f6018 inset;
     text-align: center;
     place-content: center;
     justify-content: center;
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: #e70000;
     /* font-weight: 800; */
     font-size: 130px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow: 3px 3px 5px green ;
-    
-    "></div>
-    <button class="countBtn" style=" 
+    position: absolute;
+    bottom: -90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    z-index: 5;
+    ">
+
+        </div> <img src="giphy.gif" alt="" style="
+width: 199px; 
+height: 150px; 
+overflow: hidden; 
+position: absolute;
+top: 137.2%;
+left: 50%;
+mix-blend-mode: color-burn;
+transform: translate(-50% ,-50%);
+border: 1px solid #000;
+border-radius: 0px 50px 0px 50px ;
+ ">
+
+        <!-- <img src="ok.gif" alt="" id="im" > -->
+        <button class="countBtn" style=" 
     width: 180px;
     height: 50px;
     margin: 30px auto;
@@ -66,43 +175,132 @@
     place-content: center;
     font-weight: 900;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 15px; 
     border: none;
     position: absolute;
     left: 50%;
-    top: 75%;
+    bottom: -135%;
     transform: translate(-50%, -50%);
-    box-shadow: 3px 3px 15px black inset,-3px -3px 15px inset black;
+    box-shadow: 3px 3px 15px black inset,-3px -3px 15px inset black;  
     text-shadow: 1px 1px 1px black;
     color: red;
     border: solid 1px #ff0000;
     background-color: #f7f7f7;
- 
-    "
-    
-    
-    >Counting Up</button>
+    overflow: hidden;
+    cursor: pointer;
+    ">Counting Up</button>
     </div>
+    <button class="r" style="
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    background: #951600;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 82%;
+    left: 28%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    place-content: center;
+    cursor: pointer;
+    ">Counting Reset </button>
+    <button class="re" style="
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    background: #951600;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 82%;
+    right: -15%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    place-content: center;
+    cursor: pointer;
+    ">Counting Back </button>
 </body>
 <script>
-let count = 0;
-document.addEventListener('DOMContentLoaded',()=>{
-    document.querySelector('.countBtn').addEventListener('click',()=>{
-        count++
-        document.querySelector('.countDisplay').innerHTML=count
+    let dis = document.querySelector('.countDisplay')
+    let count = 0;
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.countBtn').addEventListener('click', () => {
+            count++
+            dis.innerHTML = count
+            btn.disabled = true
+            setTimeout(() => {
+                btn.disabled = false
+            }, 4500);
+        })
     })
-})
-let btn = document.querySelector('.countBtn')
-btn.addEventListener('click',()=>{
-    setTimeout(() => {
-        btn.style.display='none'
-    }, 0);
-})
-btn.addEventListener('click',()=>{
-    setTimeout(() => {
-        btn.style.display='block'
-    }, 5000);
-})
+    let resets = document.querySelector('.r')
+    let resets1 = document.querySelector('.re')
+    let btn = document.querySelector('.countBtn')
+    resets.addEventListener('click', () => {
+        count = 0
+        dis.innerHTML = count
+        resets.style.background = 'red'
+        setTimeout(() => {
+            resets.style.background = '#951600'
+        }, 100);
+    })
+    resets1.addEventListener('click', () => {
+        count--
+        dis.innerHTML = count
+        resets1.style.background = 'red'
+        setTimeout(() => {
+            resets1.style.background = '#951600'
+        }, 100);
+    })
+    btn.addEventListener('click', () => {
+        setTimeout(() => {
+            btn.style.transition = '0.40s'
+            btn.style.width = '100px'
+            btn.style.height = '100px'
+            btn.style.borderRadius = '50%'
+            btn.style.background = 'green'
+            btn.innerHTML = '✔️'
+        }, 0);
+    })
+    btn.addEventListener('click', () => {
+        setTimeout(() => {
+            btn.style.transition = '0.60s'
+            btn.style.width = '0px'
+            btn.style.height = '0px'
+            btn.style.borderRadius = '50%'
+            btn.style.background = 'green'
+            btn.innerHTML = '✔️'
+        }, 500);
+    })
+    btn.addEventListener('click', () => {
+        setTimeout(() => {
+            btn.style.display = 'none'
+        }, 800);
+    })
+    btn.addEventListener('click', () => {
+        setTimeout(() => {
+            btn.style.display = 'block'
+            btn.style.transition = '0s'
+            btn.style.width = '180px'
+            btn.style.height = '50px'
+            btn.style.borderRadius = '15px'
+            btn.style.background = 'white'
+            btn.innerHTML = 'Counting Up'
+
+        }, 5000);
+    })
+    var im = document.getElementById("im")
+    btn.addEventListener("click", () => {
+
+            im.style.animation = 'run 7s ease 1'
+        
+    })
 </script>
+
 </html>
